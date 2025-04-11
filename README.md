@@ -10,7 +10,7 @@ Phase-field simulations of solidification and spinodal decomposition using FiPy.
 - `Task_2.py` – Bulk energy coefficient determination
 - `1D.py`, `2D.py` – Cahn-Hilliard equation simulations
 - `Phase_field_method_Report.pdf` – Detailed report with derivations, results & figures
-- `PF_practical.pdf` – Original practical sheet
+- `PF_practical.pdf` – Original project sheet
 - `spinodal_pattern_t*.png` – 2D concentration profiles at various timesteps
 
 ---
