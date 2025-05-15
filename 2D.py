@@ -33,29 +33,4 @@ c[:] = c_mean + noise
 def compute_mu_bulk(c):
     return -2 * (f0/Vm) * (c - c_gamma_e) * (c_gamma_dash_e - c) * (c_gamma_dash_e - 2*c + c_gamma_e)
 
-# --- Time loop ---
-for step in range(steps + 1):
-    c.updateOld()
-    mu.setValue(compute_mu_bulk(c) - Kc * c.faceGrad.divergence)
-    eq = TransientTerm() == DiffusionTerm(coeff=M)
-    eq.solve(var=c, dt=dt)
-
-    if step % output_interval == 0:
-        print(f"Step {step} — Time = {step * dt:.1f} s")
-
-        # --- Sharp, grid-mapped plot ---
-        plt.figure(figsize=(6, 6), dpi=300)
-        plt.imshow(
-            c.value.reshape((nx, ny)),
-            cmap='jet',                # High-contrast colormap
-            interpolation='none',     # No smoothing
-            origin='lower',           # (0,0) at bottom-left
-            extent=[0, nx, 0, ny]     # Grid index units
-        )
-        plt.title(f"Time step: {step}")
-        plt.xlabel("x")
-        plt.ylabel("y")
-        plt.colorbar(label="Concentration")
-        plt.tight_layout()
-        plt.savefig(f"spinodal_pattern_t{step}.png", dpi=300)
-        plt.close()
+Keeping the original work safe. Email atharvasinnarkar@gmail.com for the full code and mention the proper usecase.
