@@ -33,4 +33,4 @@ c[:] = c_mean + noise
 def compute_mu_bulk(c):
     return -2 * (f0/Vm) * (c - c_gamma_e) * (c_gamma_dash_e - c) * (c_gamma_dash_e - 2*c + c_gamma_e)
 
-Keeping the original work safe. Email atharvasinnarkar@gmail.com for the full code and mention the proper usecase.
+# Keeping the original work safe. Email atharvasinnarkar@gmail.com for the full code and mention the proper usecase.
