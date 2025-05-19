@@ -16,4 +16,4 @@ f0 = 1e6         # Free energy coefficient (J/m³) - REDUCED from 1e8 to 1e6
 F_inte_exp_min = 5e-3   # J/m²
 F_inte_exp_max = 50e-3  # J/m²
 
-Keeping the original work safe. Email atharvasinnarkar@gmail.com for the full code and mention the proper usecase.
+# Keeping the original work safe. Email atharvasinnarkar@gmail.com for the full code and mention the proper usecase.
